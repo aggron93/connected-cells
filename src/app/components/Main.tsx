@@ -20,8 +20,9 @@ export class Main extends React.Component<any, any> {
 
     render() {
         return (
-            <div className='content' style={{flexDirection:'column'}}>
+            <div className='content' style={{ flexDirection: 'column' }}>
                 <h1>Cell Regions</h1>
+                <p>click on the cell to change it's value between 1 and 0</p>
                 <div style={{ flexDirection: 'row' }}>
                     <TextField
                         id="filled-name"
@@ -42,9 +43,8 @@ export class Main extends React.Component<any, any> {
                         style={{ padding: 10 }}
                     />
                 </div>
-                <div>
-                    <Matrix row={this.state.row} column={this.state.column} />
-                </div>
+
+                <Matrix row={this.state.row} column={this.state.column} />
             </div>
         )
     }
