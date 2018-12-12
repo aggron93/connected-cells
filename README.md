@@ -1,3 +1,5 @@
+#Run the solution using 'npm start'
+
 # connected-cells
 A Typescript exercise in search algorithm
 
