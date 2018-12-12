@@ -43,7 +43,6 @@ export class Main extends React.Component<any, any> {
                         style={{ padding: 10 }}
                     />
                 </div>
-
                 <Matrix row={this.state.row} column={this.state.column} />
             </div>
         )

@@ -58,7 +58,7 @@ export class Matrix extends React.Component<any, any> {
             for (var j = 0; j < this.state.tableData[i].length; j++) {
                 let cellID = `${i}_${j}`
                 cell.push(
-                    <td style={{ width: 20 }} key={cellID} id={cellID}
+                    <td style={{ height: 40, width: 40, textAlign: 'center', backgroundColor: this.state.tableData[i][j] == 1 ? 'yellow' : '' }} key={cellID} id={cellID}
                         onClick={(event: any) => this.updateCell(event)}>{this.state.tableData[i][j]}
                     </td>
                 )
@@ -83,7 +83,7 @@ export class Matrix extends React.Component<any, any> {
         let largestCellAreaCollection: any
         let regionCells: any
 
-        var searchNeighbours = (i: any, j: any) => {
+        var searchNeighbours = (i: number, j: number) => {
             if (tempTable[i][j] == 1 && !found[i][j]) {
 
                 found[i][j] = true
@@ -144,8 +144,8 @@ export class Matrix extends React.Component<any, any> {
                         {table}
                     </tbody>
                 </table>
-                <p> Largest region : {largestRegion.largestCellArea}</p>
-                <p style={{ flex: 'none', textAlign: 'center', position: "fixed", width: 'auto' }}>Cells region : {JSON.stringify(largestRegion.largestCellAreaCollection)}</p>
+                <p style={{ textAlign: 'center' }}> Largest region : {largestRegion.largestCellArea}</p>
+                {/*<p style={{ flex: 'none', textAlign: 'center', position: "fixed", width: 'auto' }}>Cells region : {JSON.stringify(largestRegion.largestCellAreaCollection)}</p> */}
             </div>
         )
     }
